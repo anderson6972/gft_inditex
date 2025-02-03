@@ -1,0 +1,435 @@
+{
+	"info": {
+		"_postman_id": "7a6415a5-a8c1-4fd9-9227-000f56080b93",
+		"name": "GFT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4852852"
+	},
+	"item": [
+		{
+			"name": "Request 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/prices?productId=35455&brandId=1&applicationDate=2020-06-14 10:00:00\n",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"prices"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "35455"
+						},
+						{
+							"key": "brandId",
+							"value": "1"
+						},
+						{
+							"key": "applicationDate",
+							"value": "2020-06-14 10:00:00\n"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "request1",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/prices?productId=35455&brandId=1&applicationDate=2020-06-14 10:00:00\n",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"prices"
+							],
+							"query": [
+								{
+									"key": "productId",
+									"value": "35455"
+								},
+								{
+									"key": "brandId",
+									"value": "1"
+								},
+								{
+									"key": "applicationDate",
+									"value": "2020-06-14 10:00:00\n"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 03 Feb 2025 14:28:13 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"productId\": 35455,\n    \"brandId\": 1,\n    \"priceList\": 1,\n    \"startDate\": \"2020-06-14T00:00\",\n    \"endDate\": \"2020-12-31T23:59:59\",\n    \"price\": 35.5\n}"
+				}
+			]
+		},
+		{
+			"name": "Caso 2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/prices?productId=35455&brandId=1&applicationDate=2020-06-14 16:00:00",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"prices"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "35455"
+						},
+						{
+							"key": "brandId",
+							"value": "1"
+						},
+						{
+							"key": "Accept",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "applicationDate",
+							"value": "2020-06-14 16:00:00"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response2",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/prices?productId=35455&brandId=1&applicationDate=2020-06-14 16:00:00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"prices"
+							],
+							"query": [
+								{
+									"key": "productId",
+									"value": "35455"
+								},
+								{
+									"key": "brandId",
+									"value": "1"
+								},
+								{
+									"key": "Accept",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "applicationDate",
+									"value": "2020-06-14 16:00:00"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 03 Feb 2025 14:39:46 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"productId\": 35455,\n    \"brandId\": 1,\n    \"priceList\": 2,\n    \"startDate\": \"2020-06-14T15:00\",\n    \"endDate\": \"2020-06-14T18:30\",\n    \"price\": 25.45\n}"
+				}
+			]
+		},
+		{
+			"name": "Caso 3",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "reponse3",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/prices?productId=35455&brandId=1&applicationDate=2020-06-14 21:00:00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"prices"
+							],
+							"query": [
+								{
+									"key": "productId",
+									"value": "35455"
+								},
+								{
+									"key": "brandId",
+									"value": "1"
+								},
+								{
+									"key": "applicationDate",
+									"value": "2020-06-14 21:00:00"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 03 Feb 2025 14:40:29 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"productId\": 35455,\n    \"brandId\": 1,\n    \"priceList\": 1,\n    \"startDate\": \"2020-06-14T00:00\",\n    \"endDate\": \"2020-12-31T23:59:59\",\n    \"price\": 35.5\n}"
+				}
+			]
+		},
+		{
+			"name": "Caso 4",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "reponse4",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/prices?productId=35455&brandId=1&applicationDate=2020-06-15 10:00:00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"prices"
+							],
+							"query": [
+								{
+									"key": "productId",
+									"value": "35455"
+								},
+								{
+									"key": "brandId",
+									"value": "1"
+								},
+								{
+									"key": "applicationDate",
+									"value": "2020-06-15 10:00:00"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 03 Feb 2025 14:41:23 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"productId\": 35455,\n    \"brandId\": 1,\n    \"priceList\": 3,\n    \"startDate\": \"2020-06-15T00:00\",\n    \"endDate\": \"2020-06-15T11:00\",\n    \"price\": 30.5\n}"
+				}
+			]
+		},
+		{
+			"name": "Caso 5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/prices?productId=35455&brandId=1&applicationDate=2020-06-16 21:00:00",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"prices"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "35455"
+						},
+						{
+							"key": "brandId",
+							"value": "1"
+						},
+						{
+							"key": "applicationDate",
+							"value": "2020-06-16 21:00:00"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response5",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/prices?productId=35455&brandId=1&applicationDate=2020-06-16 21:00:00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"prices"
+							],
+							"query": [
+								{
+									"key": "productId",
+									"value": "35455"
+								},
+								{
+									"key": "brandId",
+									"value": "1"
+								},
+								{
+									"key": "applicationDate",
+									"value": "2020-06-16 21:00:00"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 03 Feb 2025 14:41:49 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"productId\": 35455,\n    \"brandId\": 1,\n    \"priceList\": 4,\n    \"startDate\": \"2020-06-15T16:00\",\n    \"endDate\": \"2020-12-31T23:59:59\",\n    \"price\": 38.95\n}"
+				}
+			]
+		}
+	]
+}
