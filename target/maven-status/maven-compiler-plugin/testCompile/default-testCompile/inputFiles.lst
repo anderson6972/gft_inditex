@@ -1,1 +1,5 @@
 C:\practicas\gft\src\test\java\com\inditex\gft\GftApplicationTests.java
+C:\practicas\gft\src\test\java\com\inditex\gft\domain\model\PriceTest.java
+C:\practicas\gft\src\test\java\com\inditex\gft\infrastructure\adapter\out\persitence\mapper\PriceEntityMapperTest.java
+C:\practicas\gft\src\test\java\com\inditex\gft\integration\PriceApiTest.java
+C:\practicas\gft\src\test\java\com\inditex\gft\application\service\PriceQueryServiceTest.java

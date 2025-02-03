@@ -4,6 +4,7 @@ import com.inditex.gft.domain.exception.PriceNotFoundException;
 import com.inditex.gft.domain.model.Price;
 import com.inditex.gft.application.port.out.PriceRepository;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -17,6 +18,7 @@ import java.util.Optional;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 
+@Tag("unit")
 @ExtendWith(MockitoExtension.class)
 public class PriceQueryServiceTest {
 

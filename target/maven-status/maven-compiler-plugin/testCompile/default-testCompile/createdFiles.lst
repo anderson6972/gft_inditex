@@ -1,1 +1,5 @@
 com\inditex\gft\GftApplicationTests.class
+com\inditex\gft\infrastructure\adapter\out\persitence\mapper\PriceEntityMapperTest.class
+com\inditex\gft\integration\PriceApiTest.class
+com\inditex\gft\domain\model\PriceTest.class
+com\inditex\gft\application\service\PriceQueryServiceTest.class

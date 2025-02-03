@@ -18,7 +18,7 @@ import jakarta.annotation.Generated;
  * PriceResponse
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2025-02-03T19:17:48.182300400+01:00[Europe/Madrid]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2025-02-03T21:04:22.416430500+01:00[Europe/Madrid]")
 public class PriceResponse {
 
   private Integer productId;

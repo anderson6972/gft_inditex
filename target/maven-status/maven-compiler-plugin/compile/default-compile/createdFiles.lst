@@ -5,6 +5,7 @@ com\inditex\gft\infrastructure\adapter\out\persistence\repository\SpringDataPric
 com\inditex\gft\application\service\PriceQueryService.class
 com\inditex\gft\domain\model\Price.class
 com\inditex\gft\GftApplication.class
+com\inditex\gft\application\port\out\PriceRepository.class
 com\inditex\gft\infrastructure\adapter\out\persistence\repository\PriceJpaRepository.class
 com\inditex\gft\infrastructure\adapter\in\rest\GlobalExceptionHandler.class
 com\inditex\gft\models\Error.class
