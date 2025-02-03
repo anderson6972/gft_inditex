@@ -10,10 +10,11 @@ Esta aplicación es un microservicio desarrollado en Spring Boot 3 que expone un
 - [Ejecutar la Aplicación](#ejecutar-la-aplicación)
     - [Desde la Línea de Comandos (Maven)](#desde-la-línea-de-comandos-maven)
     - [Usando Docker](#usando-docker)
-- [Testear la Aplicación](#testear-la-aplicación)
 - [Documentación de la API (Swagger UI)](#documentación-de-la-api-swagger-ui)
 - [Acceso a la Consola H2](#acceso-a-la-consola-h2)
 - [Especificaciones del Código y Arquitectura](#especificaciones-del-código-y-arquitectura)
+- [Docker](#docker)
+- [Test y pruebas de integracion](#test-y-pruebas-de-integración)
 
 ---
 
@@ -41,6 +42,7 @@ com.inditex.gft
 │   └── adapter.out            // Adaptadores de salida (persistencia, entidades JPA, repositorios, etc.)
 ├── configuration              // Configuraciones generales (beans, Swagger, etc.)
 └── generated                  // Código generado a partir del archivo OpenAPI (por el plugin)
+```
 
 # Ejecutar la Aplicación
 
@@ -57,17 +59,12 @@ La aplicación estará disponible en el puerto 8080.
 # Usando Docker
 
 1. **Construir la imagen Docker:
-    docker build -t gft-app .
+    Para construir la imagen usa el comando `docker build -t gft .`
 
 2. ** Ejecutar el contenedor:
-    docker run -p 8080:8080 gft-app
+    `docker run -p 8080:8080 gft`
     
 La aplicación estará disponible en http://localhost:8080.
-
-# Testear la Aplicación
-La aplicación cuenta con pruebas unitarias y de integración (usando el starter de tests de Spring Boot). Para ejecutarlas, desde la raíz del proyecto ejecuta:
-mvn test
-El informe mostrará el número de pruebas ejecutadas, fallos y tiempo total de ejecución.
 
 # Documentación de la API (Swagger UI)
 La documentación interactiva de la API está disponible a través de Swagger UI. Una vez iniciada la aplicación, accede a:
@@ -99,11 +96,14 @@ Se implementa un controlador global de excepciones (@ControllerAdvice) para capt
 Generación de Código
 Se utiliza el plugin openapi-generator-maven-plugin para generar interfaces y modelos a partir del archivo OpenAPI (prices.yaml), promoviendo el enfoque API First.
 
-Docker
+# Docker
 El Dockerfile utiliza un enfoque multi-stage para construir y empaquetar la aplicación, facilitando un despliegue sencillo y reproducible.
 
-🧪 Pruebas de Integración
+
+#  Test y pruebas de integración
 Este proyecto incluye pruebas de integración para validar el correcto funcionamiento de la API REST y su interacción con la base de datos. Se han implementado utilizando JUnit 5, RestAssured y una base de datos en memoria H2 para pruebas.
+
+Para ejecutar todos los test unitario ejecutar desde la consola: `mvn test -DexcludedGroups=integracion`
 
 ✅ Tipos de pruebas implementadas
 Pruebas de integración de API (Service Tests)
@@ -112,6 +112,10 @@ Validan que los endpoints REST devuelvan respuestas correctas.
 Se realizan con RestAssured.
 Se verifican códigos de estado HTTP, estructura de respuesta y valores esperados.
 Pruebas de integración con base de datos (Database Integration Tests)
+
+Si tu api no esta en ejecucion desde una consola del sistema ejecutar: `mvn spring-boot:run`
+Para ejecutarlas se debe tener una instancia de la aplicacion corriendo en localhost:8080 y desde la consola de comandos ejecutar: `mvn test -Dtest=PriceApiTest`
+
 
 Validan que la API interactúa correctamente con la BD H2.
 Se prueba la persistencia y recuperación de datos.
