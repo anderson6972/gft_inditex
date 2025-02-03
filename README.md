@@ -1,6 +1,7 @@
 # GFT - API de Precios
 
 Esta aplicación es un microservicio desarrollado en Spring Boot 3 que expone un endpoint REST para consultar el precio final y la tarifa aplicable de un producto en función de la fecha de aplicación. Utiliza una arquitectura hexagonal, una base de datos en memoria H2 y proporciona documentación interactiva a través de Swagger UI. Además, incluye configuración para despliegue con Docker.
+En el apartado resources del proyecto se encuentra el archivo TestJava2024_1 1.txt con el eneunciado de la prueba tecnica
 
 ---
 
