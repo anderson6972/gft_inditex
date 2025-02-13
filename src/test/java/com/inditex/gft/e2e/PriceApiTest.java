@@ -1,4 +1,4 @@
-package com.inditex.gft.integration;
+package com.inditex.gft.e2e;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -16,7 +16,7 @@ import java.nio.file.Paths;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.core.IsEqual.equalTo;
 
-@Tag("integracion")
+@Tag("e2e")
 public class PriceApiTest {
     private static final String BASE_URL = "http://localhost:8080/prices";
 

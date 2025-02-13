@@ -1,4 +1,4 @@
-package com.inditex.gft.infrastructure.adapter.out.persitence.mapper;
+package com.inditex.gft.unit.infrastructure.adapter.out.persistence.mapper;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;

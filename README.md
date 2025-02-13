@@ -101,19 +101,15 @@ Se utiliza el plugin openapi-generator-maven-plugin para generar interfaces y mo
 El Dockerfile utiliza un enfoque multi-stage para construir y empaquetar la aplicación, facilitando un despliegue sencillo y reproducible.
 
 
-#  Test y pruebas de integración
+#  TestUnitarios, E2E y pruebas de integración
 Este proyecto incluye pruebas de integración para validar el correcto funcionamiento de la API REST y su interacción con la base de datos. Se han implementado utilizando JUnit 5, RestAssured y una base de datos en memoria H2 para pruebas.
 
-Para ejecutar todos los test unitario ejecutar desde la consola: `mvn test -DexcludedGroups=integracion`
+Test Unitarios:
+Para ejecutar todos los test unitario ejecutar desde la consola: `mvn test -DexcludedGroups="integracion,e2e"`
 
-✅ Tipos de pruebas implementadas
-Pruebas de integración de API (Service Tests)
-
-Validan que los endpoints REST devuelvan respuestas correctas.
+Pruebas de e2e:
 Se realizan con RestAssured.
 Se verifican códigos de estado HTTP, estructura de respuesta y valores esperados.
-Pruebas de integración con base de datos (Database Integration Tests)
-
 Si tu api no esta en ejecucion desde una consola del sistema ejecutar: `mvn spring-boot:run`
 Para ejecutarlas se debe tener una instancia de la aplicacion corriendo en localhost:8080 y desde la consola de comandos ejecutar: `mvn test -Dtest=PriceApiTest`
 
@@ -121,3 +117,8 @@ Para ejecutarlas se debe tener una instancia de la aplicacion corriendo en local
 Validan que la API interactúa correctamente con la BD H2.
 Se prueba la persistencia y recuperación de datos.
 Se aseguran de que las consultas SQL devuelvan los datos correctos.
+
+Pruebas de integracion:
+Para ejecutar todos los test de integracion ejecutar desde la consola: `mvn test -DexcludedGroups="unit,e2e"`
+
+Validan que los endpoints REST devuelvan respuestas correctas.

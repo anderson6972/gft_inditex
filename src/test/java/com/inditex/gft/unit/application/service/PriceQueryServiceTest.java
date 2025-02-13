@@ -1,5 +1,6 @@
-package com.inditex.gft.application.service;
+package com.inditex.gft.unit.application.service;
 
+import com.inditex.gft.application.service.PriceQueryService;
 import com.inditex.gft.domain.exception.PriceNotFoundException;
 import com.inditex.gft.domain.model.Price;
 import com.inditex.gft.application.port.out.PriceRepository;
